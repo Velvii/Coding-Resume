@@ -1,0 +1,144 @@
+html{
+    position: fixed;
+    overscroll-behavior: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    outline: #e38e59 5vw solid;
+    border: #e38e59 1vw solid;
+    border-radius: 2vw;
+}
+*{
+    transition: .1s;
+}
+body{
+    margin: 0; 
+}
+
+@font-face {
+    font-family:Mont;
+    src: url(/assets/fonts/Montserrat-Black.otf);
+}
+
+#projectsDiv{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    margin: auto;
+    height: 50%;
+    width: 90%;
+    transform: translateY(50%);
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5vw;
+}
+
+#projectsDiv div{
+    display: flex;
+    flex-direction: column;
+    background-color: #e38e59;
+    width: 40vw;
+    height: 40vw;
+    align-items: center;
+    justify-content: center;
+    margin: 5vw;
+    gap:1vw;
+    border-radius: 1vw;
+    filter: blur(0vw)sepia(0);
+    transition: .1s;
+    border: .4vw #bc4834 outset;
+    box-shadow: .3vw .3vw #722a1d;
+}
+
+#projectsDiv div:hover{
+    filter:none;
+    transform: scale(1);
+    opacity: 1;
+    rotate: 1deg;
+}
+
+#projectsDiv img{
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    border: .2vw black solid;
+    border-radius: .2vw;
+    box-shadow: -.3vw -.3vw rgba(0, 0, 0, 0.291);
+    transform: translate(.3vw, .3vw);
+}
+
+#projectsDiv button{
+    width: 20vw;
+    height: 10%;
+    font-size: 2vw;
+    margin: 1vw;
+    background-color: #ffffff;
+    border: none;
+    font-family:Mont;
+    color: #261614;
+    rotate: -1deg;
+}
+
+#projectsDiv h1{
+    padding-top: 2vw;
+    font-size: 4vw;
+    font-family: Mont;
+    color: rgba(255, 255, 255, 0.713);
+    text-shadow: 0vw -.2vw rgba(0, 0, 0, 0.107);
+}
+
+#punchHole{
+    background-color: antiquewhite;
+    width: 2vw;
+    height: 2vw;
+    position: fixed;
+    top: .4vw;
+    border-radius: 50vw;
+    border: .4vw #e66953 inset;
+
+}
+
+
+#miniProjects{
+    scale: .9;
+    background-color: #e6c453 !important;
+}
+
+#miniProjects button{
+   rotate: 1deg !important;
+}
+
+
+#coffeeStain{
+    width: auto;
+    height: 50vw;
+    z-index: -1;
+    margin: auto;
+    transform: translateX(-5vw);
+    position: fixed;
+    mix-blend-mode:darken;
+    opacity: .2;
+}
+
+#miniProjectsDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #26161439;
+    display:grid;
+    padding-top: 2vw;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows:min-content min-content min-content min-content min-content min-content;
+    justify-content: center;
+    gap: 1vw;
+    backdrop-filter: blur(1vw);
+}
+
+#miniProjectsDiv div{
+    background-color: #722a1d;
+    width: 10vw;
+    height: 10vw;
+}
