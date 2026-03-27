@@ -1,7 +1,16 @@
 console.clear()
+const mainScript = document.querySelector('script[src$="main.js"]')
+const scriptUrl = new URL(mainScript?.getAttribute('src') || './javascript/main.js', window.location.href)
+const appBaseUrl = new URL('../', scriptUrl)
+
+function resolvePath(path) {
+    return new URL(path.replace(/^\//, ''), appBaseUrl).href
+}
+
 let filename = (window.location.pathname).split('/').pop();
 function loadCSS(filePath) {
-    const existingLink = document.querySelector(`link[href="${filePath}"]`)
+    const resolvedCssPath = resolvePath(filePath)
+    const existingLink = Array.from(document.querySelectorAll('link[rel="stylesheet"]')).find(link => link.href === resolvedCssPath)
     if (existingLink) {
         return
     }
@@ -9,7 +18,7 @@ function loadCSS(filePath) {
     const link = document.createElement('link')
     link.rel = 'stylesheet'
     link.type = 'text/css'
-    link.href = filePath
+    link.href = resolvedCssPath
     document.head.appendChild(link)
 }
 
@@ -19,7 +28,7 @@ async function loadComponent(className, htmlFilePath, cssFilePath) {
         return
     }
 
-    const response = await fetch(htmlFilePath)
+    const response = await fetch(resolvePath(htmlFilePath))
     if (!response.ok) {
         throw new Error(`Failed to load component HTML: ${htmlFilePath}`)
     }
@@ -30,7 +39,7 @@ async function loadComponent(className, htmlFilePath, cssFilePath) {
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        await loadComponent('header', '/html/components/header.html', '/css/components/header.css')
+        await loadComponent('header', 'html/components/header.html', 'css/components/header.css')
         injectHeaderFunc()
     }
     catch (error) {
@@ -39,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (document.getElementsByClassName("naviBar")[0]) {
         try {
-            await loadComponent("naviBar", "/html/components/naviBar.html", "/css/components/naviBar.css")
+            await loadComponent("naviBar", "html/components/naviBar.html", "css/components/naviBar.css")
             injectNaviBarFunc()
         }
         catch (error) {
@@ -89,7 +98,7 @@ function injectNaviBarFunc(){
     }
     homeButton.onclick = function(){
         console.log("AHH")
-        window.location.href = "/index.html"
+        window.location.href = resolvePath("index.html")
     }
     let rightButton = document.getElementById("rightButton")
     let leftButton = document.getElementById("leftButton")
@@ -99,7 +108,7 @@ function injectNaviBarFunc(){
 if (filename == "index.html"){
     if (document.getElementById("projectsButton") != null){
         document.getElementById("projectsButton").onclick = function(){
-            window.location = "/html/pages/projects.html"
+            window.location = resolvePath("html/pages/projects.html")
         }
     }
 }
