@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 })
 for (let i = 0; i < document.getElementsByClassName("redirect").length;i++){
     let button = document.getElementsByClassName("redirect")[i]
-    if (button.id == "about"){
+    if (button.id == "projectsButton"){
         button.onclick = function(){
-
+            window.location.href = resolvePath("html/pages/projects.html")
         }
     }
 }
@@ -81,7 +81,7 @@ function injectHeaderFunc(){
         return
     }
 
-    if (filename == "index.html"){
+    if (filename == "index.html" || filename == "" || filename == null){
             headerImg.style.background = "#59E3A5"
     }
     else if (filename == "projects.html"){
@@ -105,10 +105,10 @@ function injectNaviBarFunc(){
     }
 }
 
-if (filename == "index.html"){
+if (filename == "index.html" || filename == "" || filename == null){
     if (document.getElementById("projectsButton") != null){
         document.getElementById("projectsButton").onclick = function(){
-            window.location.href = "../html/pages/projects.html"
+            window.location.href = resolvePath("html/pages/projects.html")
         }
     }
 }
