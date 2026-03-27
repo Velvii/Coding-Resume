@@ -75,7 +75,7 @@ function injectHeaderFunc(){
     if (filename == "index.html"){
             headerImg.style.background = "#59E3A5"
     }
-    else if (filename == "about.html"){
+    else if (filename == "projects.html"){
             headerImg.style.background = "#e38e59"
     }
 }
@@ -97,9 +97,9 @@ function injectNaviBarFunc(){
 }
 
 if (filename == "index.html"){
-    if (document.getElementById("aboutButton") != null){
-        document.getElementById("aboutButton").onclick = function(){
-            window.location = "/html/pages/about.html"
+    if (document.getElementById("projectsButton") != null){
+        document.getElementById("projectsButton").onclick = function(){
+            window.location = "/html/pages/projects.html"
         }
     }
 }
