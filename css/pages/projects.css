@@ -147,7 +147,6 @@ body{
     backdrop-filter:blur(1vw)saturate(0);
     opacity: 0;
     pointer-events:none;
-    align-content: center;
 }
 
 #miniProjectsDiv div{
