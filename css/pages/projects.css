@@ -395,7 +395,7 @@ body{
     right: 0vw;
     top: -1vw;
     rotate: 1deg;
-    background-image: url("/assets/cautionTape.png");
+    background-image: url("../../assets/cautionTape.png");
     background-size: 40vw;
     scale: 1.5;
     transform-origin: top left;
@@ -411,7 +411,7 @@ body{
     right: 0vw;
     bottom: 2vw;
     rotate: -6deg;
-    background-image: url("/assets/cautionTape.png");
+    background-image: url("../../assets/cautionTape.png");
     background-size: 40vw;
     scale: 1.5;
     transform-origin: top left;
@@ -427,7 +427,7 @@ body{
     right: 0vw;
     top: 40vw;
     rotate: -20deg;
-    background-image: url("/assets/cautionTape.png");
+    background-image: url("../../assets/cautionTape.png");
     background-size: 40vw;
     scale: 1.5;
     transform-origin: top left;
