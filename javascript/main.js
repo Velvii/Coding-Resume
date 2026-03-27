@@ -108,7 +108,7 @@ function injectNaviBarFunc(){
 if (filename == "index.html"){
     if (document.getElementById("projectsButton") != null){
         document.getElementById("projectsButton").onclick = function(){
-            window.location.href = resolvePath("html/pages/projects.html")
+            window.location.href = "../html/pages/projects.html"
         }
     }
 }
