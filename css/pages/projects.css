@@ -19,7 +19,7 @@ body{
 
 @font-face {
     font-family:Mont;
-    src: url(/assets/fonts/Montserrat-Black.otf);
+    src: url(../../assets/fonts/Montserrat-Black.otf);
 }
 
 #projectsDiv{
