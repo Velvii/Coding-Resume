@@ -10,6 +10,7 @@ html{
     border: #e38e59 1vw solid;
     border-radius: 2vw;
 }
+
 *{
     transition: .1s;
 }
@@ -49,6 +50,18 @@ body{
     transition: .1s;
     border: .4vw #bc4834 outset;
     box-shadow: .3vw .3vw #722a1d, 0vw 0vw 2vw rgba(0, 0, 0, 0.58);
+    animation: projectsDivDivIntro .5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes projectsDivDivIntro{
+    0%{
+        scale: .5;
+        opacity: 0;
+        filter: contrast(0)brightness(0);
+    }
+    100%{
+        filter: contrast(1)brightness(1);
+    }
 }
 
 #projectsDiv div:hover{
@@ -80,6 +93,10 @@ body{
     color: #261614;
     rotate: -1deg;
     transition: .1s steps(2);
+    border-width: 0;
+    border-left: .2vw;
+    border-style:dotted;
+    border-color: #00000045;
 }
 
 #projectsDiv button:hover{
@@ -399,7 +416,7 @@ body{
     scale: 1.5;
     transform-origin: top left;
     background-repeat: repeat-x;
-    animation: cautionTape 10s linear infinite;
+    animation: cautionTapeIdle 6s linear infinite;
     filter: hue-rotate(-40deg)drop-shadow(0vw 0vw 1vw rgba(0, 0, 0, 0.677));
 }
 #cautionTape2{
@@ -415,7 +432,7 @@ body{
     scale: 1.5;
     transform-origin: top left;
     background-repeat: repeat-x;
-    animation: cautionTape 10s linear infinite;
+    animation: cautionTapeIdle 10s linear infinite;
     filter: hue-rotate(-20deg)drop-shadow(0vw 0vw 1vw rgba(0, 0, 0, 0.677));
 }
 #cautionTape3{
@@ -431,13 +448,22 @@ body{
     scale: 1.5;
     transform-origin: top left;
     background-repeat: repeat-x;
-    animation: cautionTape 10s linear infinite;
+    animation: cautionTapeIdle 11s linear infinite;
     filter: hue-rotate(-50deg)drop-shadow(0vw 0vw 1vw rgba(0, 0, 0, 0.677));
 }
 
-@keyframes cautionTape{
+@keyframes cautionTapeIdle{
     0%{
         transform: translateX();
+    }
+    100%{
+        transform: translateX(20vw);
+    }
+}
+
+@keyframes cautionTapeIntro{
+    0%{
+        transform: translateX(-200vw)translateY(-2vw)scale(.5);
     }
     100%{
         transform: translateX(20vw);

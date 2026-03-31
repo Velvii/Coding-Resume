@@ -111,4 +111,23 @@ if (filename == "index.html" || filename == "" || filename == null){
             window.location.href = resolvePath("html/pages/projects.html")
         }
     }
+    if (document.getElementById("contactButton") != null){
+        document.getElementById("contactButton").onclick = function(){
+            document.getElementById("outerContactPopup").style.opacity = "1"
+            document.getElementById("outerContactPopup").style.pointerEvents = "all"
+            document.getElementsByClassName("bottom-image1")[0].style.transform = "translateX(-116%)"
+            document.getElementsByClassName("bottom-image2")[0].style.transform = "translateX(36%)scaleX(-1)scale(.8)translateY(30%)"
+            document.getElementById("innerContactPopup").style.animation = "none"
+            document.getElementById("innerContactPopup").offsetHeight
+            document.getElementById("innerContactPopup").style.animation = null
+        }
+        if (document.getElementById("contactCloseButton") != null){
+            document.getElementById("contactCloseButton").onclick = function(){
+                document.getElementById("outerContactPopup").style.opacity = "0"
+                document.getElementById("outerContactPopup").style.pointerEvents = "none"
+                document.getElementsByClassName("bottom-image1")[0].style.transform = "translateX(-95%)"
+                document.getElementsByClassName("bottom-image2")[0].style.transform = "translateX(10%)scaleX(-1)scale(.8)translateY(30%)"
+            }
+        }
+    }
 }

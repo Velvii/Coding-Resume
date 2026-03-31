@@ -121,3 +121,27 @@ if (document.getElementById("closeButton") != null){
         })
     }
 }
+async function handleCautionTape(){
+    var cautionTape1
+    if (document.getElementById("cautionTape1") != null){
+        cautionTape1 = document.getElementById("cautionTape1")
+        cautionTape1.style.animation = "cautionTapeIntro 1s cubic-bezier(0.33, 1, 0.48, 1)"
+    }
+    var cautionTape2
+    if (document.getElementById("cautionTape2") != null){
+        cautionTape2 = document.getElementById("cautionTape2")
+        cautionTape2.style.animation = "cautionTapeIntro 1s cubic-bezier(0.33, 1, 0.68, 1)"
+    }
+    var cautionTape3
+    if (document.getElementById("cautionTape3") != null){
+        cautionTape3 = document.getElementById("cautionTape3")
+        cautionTape3.style.animation = "cautionTapeIntro 1s cubic-bezier(0.33, 1, 0.88, 1)"
+    }
+
+     await delay(1)
+     cautionTape1.style.animation = "cautionTapeIdle 10s linear infinite"
+     cautionTape2.style.animation = "cautionTapeIdle 10s linear infinite"
+     cautionTape3.style.animation = "cautionTapeIdle 10s linear infinite"
+}
+
+handleCautionTape()
