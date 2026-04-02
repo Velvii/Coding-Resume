@@ -383,7 +383,7 @@ body{
     text-align: center;
     color: #000000;
     font-family: Mont;
-    transform: translateY(34.5vw);
+    transform: translateY(34vw);
     border: .5vw black solid;
     border-radius: 30vw;
     background-color: rgb(255, 255, 255);
