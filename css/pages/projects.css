@@ -23,6 +23,11 @@ body{
     src: url(../../assets/fonts/Montserrat-Black.otf);
 }
 
+@font-face {
+    font-family:Kuhne;
+    src: url(../../assets/fonts/kuhne_Motta.ttf);
+}
+
 #projectsDiv{
     display: flex;
     background-color: rgba(0, 0, 0, 0);
@@ -467,5 +472,74 @@ body{
     }
     100%{
         transform: translateX(20vw);
+    }
+}
+
+#ideaboard{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 50vw;
+    top: 10vw;
+    right: 2vw;
+    background-color: rgb(68, 49, 30);
+    background-image: url(../../assets/woodtexture.png);
+    background-size: 20vw;
+    background-blend-mode:multiply;
+    border-radius: 1vw;
+    border: 1vw rgba(0, 0, 0, 0.513) solid;
+    transition: .5s cubic-bezier(0.33, 1, 0.68, 1);
+    transform: translateY(50.1vw);
+}
+
+#ideaboard div{
+    background-color: rgb(255, 255, 254);
+    width: 90%;
+    height: 95%;
+    border: .3vw rgba(0, 0, 0, 0.143) solid;
+    border-radius: .2vw;
+}
+
+#ideaboard div h1{
+    text-align: center;
+    font-size: 3vw;
+    font-family: Kuhne;
+    font-weight: bolder;
+    animation: textCrackle 10s infinite steps(2);
+}
+
+#ideaboard div ul li{
+    font-size: 2.5vw;
+    font-family: Kuhne;
+}
+
+#ideaboard div ul{
+    margin-left: 1vw;
+}
+
+#ideaboard img{
+    top: -19vw;
+    position: absolute;
+    width: 22vw;
+    height: auto;
+}
+
+@keyframes textCrackle{
+    0%{
+        transform: translate(.05vw, -.05vw)rotate(.5deg);
+    }
+    25%{
+        transform: translate(.05vw, .05vw)rotate(-1deg);
+    }
+    50%{
+        transform: translate(-.05vw, -.05vw)rotate(1deg);
+    }
+    75%{
+        transform: translate(-.05vw, .05vw)rotate(0deg);
+    }
+    100%{
+        transform: translate(-.05vw, -.05vw)rotate(-.5deg);
     }
 }

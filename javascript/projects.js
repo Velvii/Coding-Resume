@@ -145,3 +145,13 @@ async function handleCautionTape(){
 }
 
 handleCautionTape()
+
+document.getElementById("ideaboard").onclick = function(){
+    const doc = document.getElementById("ideaboard")
+    if (doc.style.transform == "translateY(50.1vw)"){
+        doc.style.transform = "translateY(0vw)"
+    }
+    else{
+        doc.style.transform = "translateY(50.1vw)"
+    }
+}
