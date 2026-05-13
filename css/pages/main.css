@@ -1,14 +1,14 @@
-html{
-    position: fixed;
-    overscroll-behavior: none;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: antiquewhite;
-    box-sizing: border-box;
-    outline: #59E3A5 5vw solid;
-    border: #59E3A5 1vw solid;
-    border-radius: 2vw;
+    html{
+        position: fixed;
+        overscroll-behavior: none;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        box-sizing: border-box;
+        outline: #59E3A5 5vw solid;
+        border: #59E3A5 1vw solid;
+        border-radius: 2vw;
 }
 *{
     transition: .1s;

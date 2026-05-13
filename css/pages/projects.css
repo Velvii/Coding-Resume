@@ -482,7 +482,7 @@ body{
     align-items: center;
     width: 40vw;
     height: 50vw;
-    top: 10vw;
+    bottom:0vw;
     right: 2vw;
     background-color: rgb(68, 49, 30);
     background-image: url(../../assets/woodtexture.png);
